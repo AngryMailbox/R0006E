@@ -1,0 +1,38 @@
+@startuml
+skinparam backgroundColor #EEEBDC
+skinparam node {
+  BackgroundColor White
+  BorderColor Black
+  FontColor Black
+}
+
+node "Hem" as home {
+  node "Snabblänkar"
+}
+
+node "Bli Medlem" as register {
+  node "Medlemsformulär" as form
+}
+
+node "Styrelse" as board {
+  node "Ordförande"
+  node "Kassör"
+  node "Eventansvarig"
+}
+
+node "Evenemang" as events {
+  node "Kommande event"
+  node "Evenemangskalender"
+  node "Bildgalleri" as gallery
+}
+
+node "Kontakt" as contact {
+  node "Kontaktuppgifter" as contact_info
+  node "Karta" as map
+}
+
+home --> register : "Bli Medlem"
+home --> board : "Styrelse"
+home --> events : "Evenemang"
+home --> contact : "Kontakt"
+@enduml

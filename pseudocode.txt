@@ -1,0 +1,19 @@
+//Mars Robot: Find water while avoiding obstacles
+
+BEGIN
+    WHILE Water == False:
+        INPUT sensors(Obstacle, Water)
+
+        WHILE Obstacle == True:
+            Turn(1°)
+            INPUT sensors(Obstacle, Water)
+        END WHILE
+
+        Move_Forward()
+
+    END WHILE
+
+    Stop()
+
+    OUTPUT("Water found")
+END
